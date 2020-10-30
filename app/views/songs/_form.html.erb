@@ -1,5 +1,7 @@
 <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
+
+<%#don't fully inderstand roor messages; looked at solution %>
     <div id="error_explanation">
       <h2>There were some errors:</h2>
 
@@ -11,6 +13,7 @@
     </div>
   <% end %>
 
+  <%#regular form_for code%>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
