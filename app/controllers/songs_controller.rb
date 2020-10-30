@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
-    def index
+    
+      def index
         @songs = Song.all
       end
     
@@ -17,6 +18,7 @@ class SongsController < ApplicationController
     
       def create
         @song = Song.new(song_params)
+        #validation stuff
         if @song.save
           redirect_to @song
         else
@@ -26,6 +28,7 @@ class SongsController < ApplicationController
     
       def update
         @song = Song.find(params[:id])
+        #validation stuff
         if @song.update(song_params)
           redirect_to @song
         else
